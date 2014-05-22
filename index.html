@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp" id="top">
 
 <head>
     <meta charset="utf-8">
@@ -27,7 +27,7 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="#page-top">
-                    <i class="fa fa-play-circle"></i>  <span class="light">Start</span> Bootstrap
+                    <i class="fa fa-play-circle"></i>  <span class="light">H.O.G.S.</span>
                 </a>
             </div>
 
@@ -41,7 +41,7 @@
                         <a href="#about">About</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#download">Rides</a>
+                        <a href="#rides">Rides</a>
                     </li>
                     <li class="page-scroll">
                         <a href="#contact">Contact</a>
@@ -78,13 +78,13 @@
     </section>
 
 <!--ABOUT-->
-    <section id="about" class="container content-section text-center">
+    <section id="about" class="about-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>About us</h2>
                 <p>We ride places.</p>
-                <p>This striking, black and white theme features stock photographs by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Map skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.</p>
-                <p>With this template, just the slightest splash of color can make a huge impact on the overall presentation and design.</p>
+                <p></p>
+                <p></p>
             </div>
         </div>
     </section>
@@ -94,39 +94,101 @@
 <!--CALENDAR-->
 
 
-   <section id="download" class="content-section text-center">
-        <div class="download-section">
+<section class="rides-section text-center">
+ 
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2>Rides</h2>
-                    <p>Check out our rides, and get involved.</p>
-                    <a href="http://startbootstrap.com/grayscale" class="btn btn-default btn-lg">check out where we are headed.</a>
+                    <button>
+                    <a href="http://startbootstrap.com/grayscale" class="btn btn-default btn-lg">Member Login</a></button>
+                    <BR><BR>
+                    <p> Check out our rides</p>
                 </div>
-                <!--MAP-->
-            <div id="map"></div>
-            </div>
+    <div class="container">
+                <!--CALENDAR-->
+        <div id="calendar">
+            <iframe src="http://www.google.com/calendar/embed?title=Harley&amp;height=300&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=en.usa%23holiday%40group.v.calendar.google.com&amp;color=%23691426&amp;ctz=America%2FDenver" style=" border-width:0 " width="400" height="400" frameborder="0" scrolling="no"></iframe>
         </div>
-    </section>
+
+                <!--MAP-->
+        <div id="map"> </div>
+
+
+    </div>
+</section>
+
+
+
+
+
+
 
 <!--CONTACT-->
 
-    <section id="contact" class="container content-section text-center">
+    <section id="contact" class="content-section text-center clearfix">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Contact</h2>
                 <p>Feel free to email us to provide some feedback on our club, and say hello!</p>
-                <p>feedback@startbootstrap.com</p>
+
+            <div ng-app="myApp">
+
+            <form name="saveTemplateData" action="#" ng-controller="FormCtrl">
+
+                Name:    <br/><input type="text" name="form.firstname">    <br/><br/>
+                Email Address: <br/><input type="text" ng-model="form.emailaddress"> <br/><br/>
+
+                <textarea rows="3" cols="25">Describe your reason for submitting this form ... </textarea> <br><br>
+
+
+                <input type="submit" ngClick="Submit">
+
+            </form>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section id="contact" class="social-section text-center">
+            <div>
                 <ul class="list-inline banner-social-buttons">
                     <li><a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
                     </li>
-                    <li><a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                    <li><a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">facebook</span></a>
                     </li>
                     <li><a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
                     </li>
                 </ul>
             </div>
-        </div>
+
     </section>
+
+
+
+
+
+
+  <footer>
+
+    <p>@JustinTafoya
+
+
+  </footer>
+
+
+
+
+
+</div></div>
+
+<script 
+   src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js">
+  </script>
+
+<script type="text/javascript" src="localeng.min.js"></script>
 
 
 
@@ -143,8 +205,10 @@
 
        <script src="js/harley.js"></script>
 
- <!--<script type="text/javascript"
-     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_hdduquNNKypbRMno9ljFtikoBh7ekcE&sensor=false"></script> -->
+     <script 
+   src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js">
+  </script>
+
 
 
 </body>

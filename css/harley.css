@@ -51,6 +51,26 @@ a:focus {
     color: #176e61;
 }
 
+
+
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+
+
+
+
+
 .light {
     font-weight: 400;
 }
@@ -171,6 +191,7 @@ a:focus {
 
 .intro-text {
     font-size: 18px;
+    margin-top: 16em;
 }
 
 @media(min-width:767px) {
@@ -185,6 +206,7 @@ a:focus {
 
     .intro-text {
         font-size: 25px;
+        margin-top: 16em;
     }
 }
 
@@ -262,11 +284,38 @@ a:focus {
     }
 }
 
-.content-section {
-    padding-top: 100px;
+.about-section{
+    color: #000;
+    background: url(../img/Ogden.jpg) no-repeat center center;
+    background-size:1000px 700px;
+    padding: 200px;
+    margin: 5px;
+
 }
 
-.download-section {
+.content-section {
+    background-color: #000;
+    padding:10px;
+    color: #fff;
+}
+
+
+
+.rides-section {
+    width: 100%;
+    height:50em;
+    padding: 50px 0;
+    color: #fff;
+    background: url(../img/Road.jpg) no-repeat center center scroll;
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+
+.social-section{
     width: 100%;
     padding: 50px 0;
     color: #fff;
@@ -278,24 +327,53 @@ a:focus {
     -o-background-size: cover;
 }
 
+#rideCalendar{
+    width:auto;
+    height:auto;
+    float:center;
+}
+
 #map {
-    width: 40%;
-    height: 200px;
-    margin-top: 0, auto;
+    width: 400px;
+    height: 400px;
+    float:left;
+    margin-top: 50px;
+    position:relative;
+
+}
+
+#calendar{
+    float:left;
+    margin-top: 50px;
 }
 
 @media(min-width:767px) {
     .content-section {
-        padding-top: 250px;
+        padding-top: 50px;
     }
 
     .download-section {
         padding: 100px 0;
     }
+    #rideCalendar{
+        width:1000px;
+        height:1000px;
+        float: center;
+    }
 
     #map {
         height: 400px;
-        margin-top: 250px;
+        width:400px;
+        margin-top: 50px;
+        float:right;
+    }
+
+    #calendar{
+        height: 400px;
+        width:400px;
+        margin-top: 50px;
+
+        float:left;
     }
 }
 
@@ -371,4 +449,10 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: rgba(255,255,255,.2);
-}
+
+
+
+
+
+
+
