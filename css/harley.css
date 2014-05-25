@@ -337,8 +337,9 @@ a:focus {
     width: 400px;
     height: 400px;
     float:left;
-    margin-top: 50px;
+    margin-top: 159px;
     position:relative;
+    display: inline-block;
 
 }
 
@@ -372,7 +373,6 @@ a:focus {
         height: 400px;
         width:400px;
         margin-top: 50px;
-
         float:left;
     }
 }

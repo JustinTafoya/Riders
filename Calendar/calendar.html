@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="calendarDemoApp" id="top">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HARLEY H.O.G.</title>
+
+    <link rel="stylesheet" href="../Calendar/bower_components/bootstrap-css/css/bootstrap.css" />
+
+    <!--FONTS-->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+
+    <link rel="stylesheet" href="../Calendar/bower_components/fullcalendar/fullcalendar.css">
+    <link rel="stylesheet" href="calendarDemo.css" />
+
+    <script src="../Calendar/bower_components/jquery/dist/jquery.js"></script>
+    <script src="../Calendar/bower_components/jquery-ui/ui/jquery-ui.js"></script>
+
+    <script src="../Calendar/bower_components/angular/angular.js"></script>
+
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.9.0.js"></script>
+
+    <script src="../Calendar/bower_components/fullcalendar/fullcalendar.js"></script>
+    <script src="../Calendar/bower_components/fullcalendar/gcal.js"></script>
+    <script src="../Calendar/src/calendar.js"></script>
+    <script src="calendarDemo.js"></script>
+</head>
+
+
+
+
+
+
+<!-- <body data-spy="scroll"> -->
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+<!--                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button> -->
+                <a class="navbar-brand" href="../index.html">
+                    <i class="fa fa-play-circle"></i>  <span class="light">Home</span>
+                </a>
+            </div>
+
+            <!-- NAV-->
+<!--             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about">About</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#rides">Rides</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul> -->
+            </div><!--.navbar-collapse -->
+        </div><!--.container -->
+        
+    </nav>
+
+
+        <section id="directives-calendar" ng-controller="CalendarCtrl">
+            <div class="well">
+                <div class="row-fluid background">
+<!--END ADD EVENT-->
+
+                    <div class="span6 rideCalendar">
+                        <tabset>
+                            <tab select="renderCalender(myCalendar1);">
+                              <tab-heading>
+                               <i class="glyphicon glyphicon-bell"></i> Ride Calendar
+                              </tab-heading>
+                              <div class="alert-success calAlert" ng-show="alertMessage != undefined && alertMessage != ''">
+                                <h4>{{alertMessage}}</h4>
+                              </div>
+                              <div class="btn-toolbar">
+                                <div class="btn-group">
+                                    <button class="btn btn-success" ng-click="changeView('agendaDay', myCalendar1)">AgendaDay</button>
+                                    <button class="btn btn-success" ng-click="changeView('agendaWeek', myCalendar1)">AgendaWeek</button>
+                                    <button class="btn btn-success" ng-click="changeView('month', myCalendar1)">Month</button>
+                                </div>
+                              </div>
+                            <div class="calendar" ng-model="eventSources" calendar="myCalendar1" config="uiConfig.calendar" ui-calendar="uiConfig.calendar"></div>
+                           </tab>
+
+                        </tabset>
+                    </div>
+
+                    <span id="map" class="span4"> <BR><BR>
+                    </span>
+
+<!--ADD EVENT-->
+
+
+                    <div class="span4 addCalendar">
+                        
+                        <div class="btn-group calTools addCalendar">           
+                          <button class="btn" ng-click="addRemoveEventSource(eventSources,eventSource)">
+                            Toggle Source
+                          </button>
+                          <button type="button" class="btn btn-primary" ng-click="addEvent()">
+                            Add Event
+                          </button>
+                        </div>
+
+                        <ul class="unstyled">
+                            <li ng-repeat="e in events">
+                                <div class="alert alert-info">
+                                    <a class="close" ng-click="remove($index)"><i class="icon-remove"></i></a>
+                                    <b> <input ng-model="e.title"></b> 
+                                    {{e.start | date:"MMM dd"}} - {{e.end | date:"MMM dd"}}
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+        </section>
+
+
+
+
+
+
+
+    </div>
+</div>
+        <script type="text/javascript">
+
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-17352735-3']);
+            _gaq.push(['_trackPageview']);
+
+            (function () {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+
+    <!--GOOGLE MAPS API-->
+   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_hdduquNNKypbRMno9ljFtikoBh7ekcE&sensor=false"></script>
+    <script src="map.js"></script>
+    </body>
+</html>

@@ -1,0 +1,8 @@
+
+
+{
+  "name": "Riders",
+  "dependencies": {
+    "angular-ui-calendar": "latest"
+	}
+}
