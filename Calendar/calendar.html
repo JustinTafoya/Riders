@@ -18,6 +18,10 @@
     <link rel="stylesheet" href="../Calendar/bower_components/fullcalendar/fullcalendar.css">
     <link rel="stylesheet" href="calendarDemo.css" />
 
+
+
+        <!--BOWER FOR CALENDAR-->
+
     <script src="../Calendar/bower_components/jquery/dist/jquery.js"></script>
     <script src="../Calendar/bower_components/jquery-ui/ui/jquery-ui.js"></script>
 
@@ -83,10 +87,7 @@
                             <tab select="renderCalender(myCalendar1);">
                               <tab-heading>
                                <i class="glyphicon glyphicon-bell"></i> Ride Calendar
-                              </tab-heading>
-                              <div class="alert-success calAlert" ng-show="alertMessage != undefined && alertMessage != ''">
-                                <h4>{{alertMessage}}</h4>
-                              </div>
+                              </tab-heading>                              
                               <div class="btn-toolbar">
                                 <div class="btn-group">
                                     <button class="btn btn-success" ng-click="changeView('agendaDay', myCalendar1)">AgendaDay</button>
@@ -96,16 +97,78 @@
                               </div>
                             <div class="calendar" ng-model="eventSources" calendar="myCalendar1" config="uiConfig.calendar" ui-calendar="uiConfig.calendar"></div>
                            </tab>
-
                         </tabset>
                     </div>
+                        <div class="alert-success calAlert map row-fluid">
 
-                    <span id="map" class="span4"> <BR><BR>
-                    </span>
+                                <!--PORTLAND-->
+                            <div ng-show ="clickedRide === 'Portland'">
+                                <h4>{{alertMessage}}</h4>
+                                <iframe 
+                                id = "map" 
+                                width="600" 
+                                height="450" 
+                                frameborder="0" 
+                                style="border:0" 
+                                src="https://www.google.com/maps/embed/v1/directions?origin=Ogden%2C%20UT%2C%20United%20States
+                                &destination=portland%20oregon
+                                &key=AIzaSyB_hdduquNNKypbRMno9ljFtikoBh7ekcE
+                                &center=49,-123
+                                &zoom=6
+                                &maptype=satellite">
+                                </iframe>
 
+                               <!--  <h4>{{alertMessage}} <embed id="map" src="https://www.google.com/maps/embed?pb=!1m35!1m12!1m3!1d5919150.474698581!2d-117.34040799999998!3d43.581337999999654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m20!1i0!3e0!4m3!3m2!1d41.3223267!2d-112.0028864!4m3!3m2!1d43.616191799999996!2d-116.2117372!4m3!3m2!1d45.3439876!2d-118.1358202!4m5!1s0x54950b0b7da97427%3A0x1c36b9e6f6d18591!2sPortland%2C+OR!3m2!1d45.5234515!2d-122.6762071!5e0!3m2!1sen!2sus!4v1401331473942&zoom=5" width="400" height="400" frameborder="0" style="border:1"></embed></h4> -->
+                            </div>
+
+
+
+
+
+                                <!--DENVER-->
+                            <div ng-show ="clickedRide === 'Denver'">  
+                                <h4>{{alertMessage}}</h4>
+                                <iframe 
+                                id = "map" 
+                                width="600" 
+                                height="450" 
+                                frameborder="0" 
+                                style="border:0" 
+                                src="https://www.google.com/maps/embed/v1/directions?origin=Ogden%2C%20UT%2C%20United%20States
+                                &destination=denver%20colorado
+                                &key=AIzaSyB_hdduquNNKypbRMno9ljFtikoBh7ekcE
+                                &center=45,-115
+                                &zoom=6.7
+                                &maptype=satellite">
+                                </iframe>
+
+                                <!-- <h4><center>{{alertMessage}}</center> <embed 
+                                id="map" src="https://www.google.com/maps/embed?pb=!1m35!1m12!1m3!1d3095353.893469357!2d-110.69432406824035!3d40.744282327967525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m20!1i0!3e0!4m5!1s0x87530e94da9c4d7b%3A0x61dcd77b34b32c!2sOgden!3m2!1d41.223!2d-111.9738304!4m5!1s0x875c4e954ff4de09%3A0x3c20a46abf95fc13!2sRawlins%2C+WY!3m2!1d41.7910697!2d-107.23866269999999!4m5!1s0x876b80aa231f17cf%3A0x118ef4f8278a36d6!2sDenver!3m2!1d39.737567!2d-104.98471789999999!5e0!3m2!1sen!2sus!4v1401323150111" width="400" height="400" frameborder="0" style="border:0"></embed></h4> -->
+                            </div>
+
+                                <!--PHOENIX-->
+                            <div ng-show ="clickedRide === 'Phoenix'">    
+                                <h4>{{alertMessage}}</h4>
+                                <iframe 
+                                id = "map" 
+                                width="600" 
+                                height="450" 
+                                frameborder="0" 
+                                style="border:0" 
+                                src="https://www.google.com/maps/embed/v1/directions?origin=Ogden%2C%20UT%2C%20United%20States
+                                &destination=phoenix%20arizona
+                                &key=AIzaSyB_hdduquNNKypbRMno9ljFtikoBh7ekcE
+                                &center=49,-120
+                                &zoom=6
+                                &maptype=satellite">
+                                </iframe>
+
+                               <!--<h4>{{alertMessage}} <embed src="https://www.google.com/maps/embed?pb=!1m35!1m12!1m3!1d6503946.989862329!2d-117.8039283932642!3d37.25351129025036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m20!1i0!3e0!4m5!1s0x87530e94da9c4d7b%3A0x61dcd77b34b32c!2sOgden!3m2!1d41.223!2d-111.9738304!4m5!1s0x80ca44d0984939e5%3A0x531707f2f8a11c1e!2sSt+George%2C+UT!3m2!1d37.0965278!2d-113.56841639999999!4m5!1s0x872b12ed50a179cb%3A0x8c69c7f8354a1bac!2sPhoenix%2C+AZ!3m2!1d33.4483771!2d-112.0740373!5e0!3m2!1sen!2sus!4v1401330967620" width="400" height="400" frameborder="0" style="border:0"></embed></h4> -->
+                            </div>
+                        </div>
+
+                        
 <!--ADD EVENT-->
-
-
                     <div class="span4 addCalendar">
                         
                         <div class="btn-group calTools addCalendar">           
@@ -155,8 +218,56 @@
             })();
         </script>
 
-    <!--GOOGLE MAPS API-->
+        <!--GOOGLE MAPS API-->
    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_hdduquNNKypbRMno9ljFtikoBh7ekcE&sensor=false"></script>
+   
     <script src="map.js"></script>
     </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- CUSTOM ANGULAR MAP PROJECT -->
+
+
+
+<!-- 
+<section id="map">
+<h4>Click to add a marker!</h4>
+<p>{{zoomMessage}}</p>
+<ul>
+  <li ng-repeat="marker in myMarkers">
+    <a ng-click="myMap.panTo(marker.getPosition())">Pan to Marker {{$index}}</a>
+  </li>
+</ul>
+  -->
+<!-- this is the confusing part. we have to point the map marker directive
+  at an existing google.maps.Marker object, so it can hook up events -->
+<!-- <div ng-repeat="marker in myMarkers" ui-map-marker="myMarkers[$index]"
+  ui-event="{'map-click': 'openMarkerInfo(marker)'}">
+</div> -->
+ 
+<!-- <div ui-map-info-window="myInfoWindow">
+  <h1>Marker</h1>
+  Lat: <input ng-model="currentMarkerLat">, Lng: <input ng-model="currentMarkerLng">
+  <a ng-click="setMarkerPosition(currentMarker, currentMarkerLat, currentMarkerLng)">Set Position</a>
+</div> -->
+ 
+<!-- Giving the div an id="map_canvas" fix problems with twitter bootstrap affecting
+google maps -->
+<!-- <div id="map_canvas" ui-map="myMap" class="map"
+  ui-event="{'map-click': 'addMarker($event, $params)', 'map-zoom_changed': 'setZoomMessage(myMap.getZoom())' }"
+  ui-options="mapOptions">
+</div>
+</section>
+ -->

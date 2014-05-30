@@ -16,7 +16,6 @@ section {
 
 
 
-
 .navbar {
     margin-bottom: 0;
     border-bottom: 1px solid rgba(255,255,255,.3);
@@ -204,12 +203,20 @@ section {
     width: 550px;
     height:600px;
     float:left;
-	margin-top:90px;
+	margin-top:10px;
     margin-left:20px;
+    margin-bottom:10px;
     position:relative;
     display:block;
+    zoom:1;
     clear:right;
     border: 1px solid white;
+
+}
+
+
+#fix{
+
 
 }
 
@@ -217,7 +224,7 @@ section {
 	margin-top:20px;
     float: left;
     clear: left;
-    display:inline;
+    display:block;
 }
 
 
