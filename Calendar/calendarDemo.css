@@ -1,9 +1,11 @@
 /*** Docs ***/
 body {
-
 	color:white;
-	background-color: black;
-/*	background-image: url('../CalendarTest/Asphalt.jpg')*/
+/*	background-color: #fff;*/
+	background-image: url("../Calendar/img/Road1.jpg");
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-size: 1500px;
 }
 section {
 /*	padding-top: 10px;
@@ -14,10 +16,46 @@ section {
 	float: left;*/
 }
 
+@media(min-width:767px) {
+    p {
+        margin: 0 0 35px;
+        font-size: 20px;
+        line-height: 1.6;
+    }
+}
+
+.background{
+/*	background-image: url('../Calendar/img/R.jpg');*/
+	margin-top:10px;
+/*	background-color:rgba(#000, .5);
+	background-position: left;
+	background-repeat:no-repeat;
+	background-attachment:fixed;*/
+}
+
+.btn{
+	background-color:orange;
+	background-image: linear-gradient(to bottom, #151615, #9E7344);
+}
+
+.btn a:hover{
+	background-color:orange;
+	background-image: linear-gradient(to bottom, #151615, #9E7344);
+}
+
+.positionCenter{
+	margin-left:10%;
+}
 
 
+/*NAVIGATION*/
+.light {
+    font-weight: 400;
+}
 .navbar {
+	padding:0;
     margin-bottom: 0;
+    margin-left:20px ;
     border-bottom: 1px solid rgba(255,255,255,.3);
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -81,16 +119,7 @@ section {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
+/*END NAVIGATION*/
 
 .icon-github {
 	background-image: url('../lib/bootstrap/docs/assets/img/github-16px.png') no-repeat center;
@@ -165,10 +194,10 @@ section {
 	transition: opacity 0.15s linear;
 }
 
-/*** Calendar ***/
 
+/*CALENDAR*/
 .calAlert{
-	width: 595px; float: right; margin-bottom: 5px;
+	width: 50%; float: left; margin-bottom: 5px;
 }
 
 .calXBtn{
@@ -194,31 +223,6 @@ section {
 }
 
 
-#rideCalendar{
-	
-}
-
-
-#map {
-    width: 550px;
-    height:600px;
-    float:left;
-	margin-top:10px;
-    margin-left:20px;
-    margin-bottom:10px;
-    position:relative;
-    display:block;
-    zoom:1;
-    clear:right;
-    border: 1px solid white;
-
-}
-
-
-#fix{
-
-
-}
 
 .addCalendar{
 	margin-top:20px;
@@ -230,17 +234,21 @@ section {
 
 #directives-calendar{
 	float:center;
-	background-color:black;
+	margin:50px 0 0 0;
+
 }
 
-.background{
-	background-image: url('../Calendar/img/R.jpg');
-	background-position: left;
-	background-repeat:no-repeat;
-	background-attachment:fixed;
-}
 
-.light {
-    font-weight: 400;
-}
+/*MAP*/
+#map {
+    width: 500px;
+    height:550px;
+    float:center;
+    margin-left:90px;
+	margin-top:30px;
+    position:relative;
+    display:block;
+    zoom:1;
+    border: 2px solid orange;
 
+}

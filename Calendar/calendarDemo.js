@@ -13,28 +13,33 @@ function CalendarCtrl($scope) {
 
     /* event source that pulls from google.com */
     $scope.eventSource = {
+            color: '#000',
+            textColor: '#fff',
             url: "http://www.google.com/calendar/feeds/usa__en%40holiday.calendar.google.com/public/basic",
             className: 'gcal-event',           // an option!
             currentTimezone: 'America/Denver' // an option!
     };
+
     /* event source that contains custom events on the scope */
-    $scope.events = [
+    $scope.events =[
       // {title: 'All Day Event',start: new Date(y, m, 1)},
-      {title: 'Portland',start: new Date(y, m, 1 - 0),end: new Date(y, m, 6 - 0)},
+      {title: 'Portland',description: "Goes far",
+      start: new Date(y, m, 1 - 0),end: new Date(y, m, 6 - 0)},
       {title: 'Denver',start: new Date(y, m, 15 - 0),end: new Date(y, m, 22 - 0)},
-      {title: 'Phoenix',start: new Date(y, 6, 15 - 0),end: new Date(y, 6, 22 - 0)},
+      {title: 'Phoenix',start: new Date(y, 5, 15 - 0),end: new Date(y, 5, 22 - 0)},
       // {id: 999,title: 'Repeating Event',start: new Date(y, m, d - 3, 16, 0),allDay: false},
       // {id: 999,title: 'Repeating Event',start: new Date(y, m, d + 4, 16, 0),allDay: false},
       // {title: 'Click for Google',start: new Date(y, m, 28),end: new Date(y, m, 29),url: 'http://yahoo.com/'}//Page link
     ];
+
     /* event source that calls a function on every view switch */
-    $scope.eventsF = function (start, end, callback) {
-      var s = new Date(start).getTime() / 1000;
-      var e = new Date(end).getTime() / 1000;
-      var m = new Date(start).getMonth();
-      // var events = [{title: 'Feed Me ' + m,start: s + (50000),end: s + (100000),allDay: false, className: ['customFeed']}];
-      callback(events);
-    };
+    // $scope.eventsF = function (start, end, callback) {
+    //   var s = new Date(start).getTime() / 1000;
+    //   var e = new Date(end).getTime() / 1000;
+    //   var m = new Date(start).getMonth();
+    //   var events = [{title: '' + m,start: s + (50000),end: s + (100000),allDay: false, className: ['customFeed']}];
+    //   callback(events);
+    // };
 
     // $scope.calEventsExt = {
     //    color: '#f00',
@@ -45,19 +50,21 @@ function CalendarCtrl($scope) {
     //       {type:'party',title: 'Google',start: new Date(y, m, 28),end: new Date(y, m, 29),url: 'http://yahoo.com/'}
     //     ]
     // };
+
     /* alert on eventClick */
     $scope.alertOnEventClick = function( event, allDay, jsEvent, view ){
         $scope.alertMessage = (event.title + ' trip');
+        $scope.alertDescription = (event.description)
         $scope.clickedRide = event.title;
     };
-    // /* alert on Drop */
-    //  $scope.alertOnDrop = function(event, dayDelta, minuteDelta, allDay, revertFunc, jsEvent, ui, view){
-    //    $scope.alertMessage = ('Event Droped to make dayDelta ' + dayDelta);
-    // };
-    // /* alert on Resize */
-    // $scope.alertOnResize = function(event, dayDelta, minuteDelta, revertFunc, jsEvent, ui, view ){
-    //    $scope.alertMessage = ('Event Resized to make dayDelta ' + minuteDelta);
-    // };
+    /* alert on Drop */
+     $scope.alertOnDrop = function(event, dayDelta, minuteDelta, allDay, revertFunc, jsEvent, ui, view){
+       $scope.alertMessage = ('Event Droped to make dayDelta ' + dayDelta);
+    };
+    /* alert on Resize */
+    $scope.alertOnResize = function(event, dayDelta, minuteDelta, revertFunc, jsEvent, ui, view ){
+       $scope.alertMessage = ('Event Resized to make dayDelta ' + minuteDelta);
+    };
     /* add and removes an event source of choice */
     $scope.addRemoveEventSource = function(sources,source) {
       var canAdd = 0;
