@@ -2,7 +2,7 @@
 body {
 	color:white;
 /*	background-color: #fff;*/
-	background-image: url("../Calendar/img/Road1.jpg");
+	background-image: url("../Calendar/img/Road.jpg");
 	background-repeat:no-repeat;
 	background-attachment:fixed;
 	background-size: 1500px;
@@ -16,6 +16,14 @@ section {
 	float: left;*/
 }
 
+h4{
+	text-decoration:underline;
+	float:center;
+}
+li{
+    list-style-type: none;
+}
+
 @media(min-width:767px) {
     p {
         margin: 0 0 35px;
@@ -24,9 +32,11 @@ section {
     }
 }
 
+
+
 .background{
 /*	background-image: url('../Calendar/img/R.jpg');*/
-	margin-top:10px;
+/*	margin-top:10px;*/
 /*	background-color:rgba(#000, .5);
 	background-position: left;
 	background-repeat:no-repeat;
@@ -44,22 +54,40 @@ section {
 }
 
 .positionCenter{
-	margin-left:10%;
+	margin-left:7%;
+	margin-right:5%;
+}
+
+.container{
+    position:absolute;
+    width:550px;
+
 }
 
 
 /*NAVIGATION*/
-.light {
-    font-weight: 400;
-}
+
 .navbar {
-	padding:0;
+	padding:0px 10px 0px 30px;
     margin-bottom: 0;
-    margin-left:20px ;
+    margin-left:0px ;
     border-bottom: 1px solid rgba(255,255,255,.3);
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     background-color: #000;
+}
+.navbar-Itinerary {
+	padding:0px 0px 0px 0px;
+    position:absolute;
+    border-bottom: 1px solid rgba(255,255,255,.3);
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    background-color: #000;
+    height:40px;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    width:550px;
+}
 }
 
 .navbar-brand {
@@ -100,13 +128,23 @@ section {
 
 @media(min-width:767px) {
     .navbar {
-        padding: 10px 0;
-        border-bottom: 0;
-        letter-spacing: 1px;
-        background: 0 0;
-        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    padding: 0px 0px 0px 0px;
+    border-bottom: 0;
+    letter-spacing: 1px;
+    background-color: #000;
+    -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+    transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+    .navbar-Itinerary {
+    position:absolute;
+    border-bottom: 1px solid rgba(255,255,255,.3);
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+/*    background-color: orange;*/
+    height:40px;
+    width:550px;
+
     }
 
     .top-nav-collapse {
@@ -117,6 +155,14 @@ section {
     .navbar-custom.top-nav-collapse {
         border-bottom: 1px solid rgba(255,255,255,.3);
     }
+    .navbar-Itinerary a:hover{
+    	background-color: orange;
+    	color:orange;
+    }
+}
+
+.tabSet{
+	margin-bottom: 0px;
 }
 
 /*END NAVIGATION*/
@@ -196,8 +242,9 @@ section {
 
 
 /*CALENDAR*/
+
 .calAlert{
-	width: 50%; float: left; margin-bottom: 5px;
+	width: 50%; float: left; margin: 90px 15px 5px 0px; background-color: red;
 }
 
 .calXBtn{
@@ -222,8 +269,6 @@ section {
 	margin-bottom: 10px;
 }
 
-
-
 .addCalendar{
 	margin-top:20px;
     float: left;
@@ -239,16 +284,42 @@ section {
 }
 
 
+/*TABS*/
+.mapTab{
+background-color: orange;
+border:1px solid red;
+}
+
+.itineraryTab{
+	width: 500px;
+    height:500px;
+}
+
+
+
+
 /*MAP*/
-#map {
-    width: 500px;
-    height:550px;
-    float:center;
-    margin-left:90px;
-	margin-top:30px;
-    position:relative;
-    display:block;
-    zoom:1;
+.map {
+/*	margin-left:5%;*/
+    float:left;
+	margin-top:5px;
     border: 2px solid orange;
+    margin-left: 0px;
 
 }
+.mapAlert{
+	width: 550px; 
+/*	background-color: blue;*/
+	float: left; 
+	margin-left:5%;
+}
+
+.mapbutton{
+	background-color:orange;
+	background-image: linear-gradient(to bottom, #151615, #9E7344);
+	margin-left:4%;
+	margin-top:1%;
+}
+
+
+

@@ -287,8 +287,9 @@ a:focus {
 .about-section{
     color: #000;
     background: url(../img/Ogden.jpg) no-repeat center center;
-    background-size:1000px 700px;
-    padding: 200px;
+    background-size:1200px 900px;
+    padding: 250px;
+    padding-bottom: 250px;
     margin: 5px;
 
 }
@@ -319,7 +320,7 @@ a:focus {
     width: 100%;
     padding: 50px 0;
     color: #fff;
-    background: url(../img/Road.jpg) no-repeat center center scroll;
+    background: url(../img/asphalt.jpg) no-repeat center center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;

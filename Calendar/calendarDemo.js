@@ -10,6 +10,7 @@ function CalendarCtrl($scope) {
     var y = date.getFullYear();
 
     $scope.clickedRide = '';
+    $scope.Itinerary='';
 
     /* event source that pulls from google.com */
     $scope.eventSource = {
@@ -23,24 +24,26 @@ function CalendarCtrl($scope) {
     /* event source that contains custom events on the scope */
     $scope.events =[
       // {title: 'All Day Event',start: new Date(y, m, 1)},
-      {title: 'Portland',description: "Goes far",
-      start: new Date(y, m, 1 - 0),end: new Date(y, m, 6 - 0)},
-      {title: 'Denver',start: new Date(y, m, 15 - 0),end: new Date(y, m, 22 - 0)},
-      {title: 'Phoenix',start: new Date(y, 5, 15 - 0),end: new Date(y, 5, 22 - 0)},
+      {title: 'Portland',description: "Goes far",start: new Date(y, m, 1 - 0),end: new Date(y, m, 6 - 0)},
+      {title: 'Denver',start: new Date(y, 5, 27 - 0),end: new Date(y, 6, 01 - 0)},
+      {title: 'San Francisco',start: new Date(y, 6, 15 - 0),end: new Date(y, 6, 22 - 0)},
       // {id: 999,title: 'Repeating Event',start: new Date(y, m, d - 3, 16, 0),allDay: false},
       // {id: 999,title: 'Repeating Event',start: new Date(y, m, d + 4, 16, 0),allDay: false},
       // {title: 'Click for Google',start: new Date(y, m, 28),end: new Date(y, m, 29),url: 'http://yahoo.com/'}//Page link
     ];
 
     /* event source that calls a function on every view switch */
-    // $scope.eventsF = function (start, end, callback) {
-    //   var s = new Date(start).getTime() / 1000;
-    //   var e = new Date(end).getTime() / 1000;
-    //   var m = new Date(start).getMonth();
-    //   var events = [{title: '' + m,start: s + (50000),end: s + (100000),allDay: false, className: ['customFeed']}];
-    //   callback(events);
-    // };
+    $scope.eventsF = function (start, end, callback) {
+      var s = new Date(start).getTime() / 1000;
+      var e = new Date(end).getTime() / 1000;
+      var m = new Date(start).getMonth();
+      var events = [];
+      // var events = [{title: '' + m,start: s + (50000),end: s + (100000),allDay: false, className: ['customFeed']}];
+      callback(events);
+    };
 
+
+    /*Calendar Option with external links*/
     // $scope.calEventsExt = {
     //    color: '#f00',
     //    textColor: 'yellow',
@@ -51,9 +54,11 @@ function CalendarCtrl($scope) {
     //     ]
     // };
 
+
     /* alert on eventClick */
     $scope.alertOnEventClick = function( event, allDay, jsEvent, view ){
         $scope.alertMessage = (event.title + ' trip');
+        $scope.city=(event.title)
         $scope.alertDescription = (event.description)
         $scope.clickedRide = event.title;
     };
@@ -116,28 +121,10 @@ function CalendarCtrl($scope) {
         eventResize: $scope.alertOnResize
       }
     };
-
-    // $scope.changeLang = function() {
-    //   if($scope.changeTo === 'Hungarian'){
-    //     $scope.uiConfig.calendar.dayNames = ["Vasárnap", "Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat"];
-    //     $scope.uiConfig.calendar.dayNamesShort = ["Vas", "Hét", "Kedd", "Sze", "Csüt", "Pén", "Szo"];
-    //     $scope.changeTo= 'English';
-    //   } else {
-    //     $scope.uiConfig.calendar.dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    //     $scope.uiConfig.calendar.dayNamesShort = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-    //     $scope.changeTo = 'Hungarian';
-    //   }
-    // };
     /* event sources array*/
     $scope.eventSources = [$scope.events, $scope.eventSource, $scope.eventsF];
     $scope.eventSources2 = [$scope.calEventsExt, $scope.eventsF, $scope.events];
 }
-
-
-
-
-
-
 
 
 
