@@ -150,7 +150,7 @@ a:focus {
     height: auto;
     padding: 100px 0;
     text-align: center;
-    color: orange;
+    color: #FF8000;
     background: url(../img/harleyBike.jpg) no-repeat bottom center scroll;
     background-color: #000;
     -webkit-background-size: cover;
@@ -285,7 +285,7 @@ a:focus {
 }
 
 .about-section{
-    color: orange;
+    color: #FF8000;
     font-color: #fff;
     background: url(../img/Ogden.jpg) no-repeat center center;
     background-size:1200px 900px;

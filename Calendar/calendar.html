@@ -76,9 +76,10 @@
 <section>
         <div class="well mapAlert">
 
-                    <!--PORTLAND-->
+<!--PORTLAND-->
             <div class="ng-hide" ng-show="clickedRide === 'Portland'">
                 <tabset>
+
                     <!--TAB 1-->
                     <tab select="renderCalender(myCalendar1);">
                         <tab-heading>
@@ -105,48 +106,48 @@
                     <tab select="renderCalender(myCalendar1); tabContentAdd">
                         <tab-heading>
                         <i class="glyphicon glyphicon-bell"></i> Itinerary
-                         </tab-heading>  
+                        </tab-heading>  
                     <div class="itineraryTab">
-                    <div data-spy="scroll" data-target=".navbar-example">
-                        <div class="navbar navbar-Itinerary navbar-inner">
-                            <ul class="nav container">
-                                <li><a href="#Day1">Day 1</a></li>
-                                <li><a href="#Day2">Day 2</a></li>
-                                <li><a href="#Day3">Day 3</a></li>
-                                <li><a href="#Day4">Day 4</a></li>
-                                <li><a href="#Day5">Day 5</a></li>
-                                <li><a href="#Day6">Day 6</a></li>
-                            </ul>
+                        <div data-spy="scroll" data-target=".navbar-example">
+                            <div class="navbar navbar-Itinerary navbar-inner">
+                                <ul class="nav container">
+                                    <li><a href="#Day1">Day 1</a></li>
+                                    <li><a href="#Day2">Day 2</a></li>
+                                    <li><a href="#Day3">Day 3</a></li>
+                                    <li><a href="#Day4">Day 4</a></li>
+                                    <li><a href="#Day5">Day 5</a></li>
+                                    <li><a href="#Day6">Day 6</a></li>
+                                </ul>
+                            </div>
+                            <BR><BR>
+                            <h4 id="Day1"><center>{{alertMessage}}</center></h4>        
+                                <div class="navbar-example">
+                                    <ul class="nav nav-tabs">
+                                      <h1>Day 1</h1>
+                                      <p>Leave Ogden at 7:00 AM.</p>
+                                    </ul>
+                                    <ul class="nav nav-tabs">
+                                      <h1 id="Day2"><BR><BR>Day 2</h1>
+                                      <p>Arrive in Boise. Spend the night in Boise.</p>
+                                    </ul>
+                                    <ul class="nav nav-tabs">
+                                      <h1 id="Day3"><BR><BR>Day 3</h1>
+                                      <p>Leave Boise at 9:00 AM. Arrive in Portland.</p>
+                                    </ul>
+                                    <ul class="nav nav-tabs">
+                                      <h1 id="Day4"><BR><BR>Day 4</h1>
+                                      <p>Free Day in Portland.</p>
+                                    </ul>
+                                    <ul class="nav nav-tabs">
+                                      <h1 id="Day5"><BR><BR>Day 5</h1>
+                                      <p>Leave Portland. Arrive in Baker City.</p>
+                                    </ul>
+                                    <ul class="nav nav-tabs">
+                                      <h1 id="Day6"><BR><BR>Day 6</h1>
+                                      <p>Leave Baker City at 11:00 AM. Return to Ogden.</p>
+                                    </ul>
+                                </div>                       
                         </div>
-                        <BR><BR>
-                        <h4 id="Day1"><center>{{alertMessage}}</center></h4>        
-                            <div class="navbar-example">
-                                <ul class="nav nav-tabs">
-                                  <h1>Day 1</h1>
-                                  <p>Leave Ogden at 7:00 AM.</p>
-                                </ul>
-                                <ul class="nav nav-tabs">
-                                  <h1 id="Day2"><BR><BR>Day 2</h1>
-                                  <p>Arrive in Boise. Spend the night in Boise.</p>
-                                </ul>
-                                <ul class="nav nav-tabs">
-                                  <h1 id="Day3"><BR><BR>Day 3</h1>
-                                  <p>Leave Boise at 9:00 AM. Arrive in Portland.</p>
-                                </ul>
-                                <ul class="nav nav-tabs">
-                                  <h1 id="Day4"><BR><BR>Day 4</h1>
-                                  <p>Free Day in Portland.</p>
-                                </ul>
-                                <ul class="nav nav-tabs">
-                                  <h1 id="Day5"><BR><BR>Day 5</h1>
-                                  <p>Leave Portland. Arrive in Baker City.</p>
-                                </ul>
-                                <ul class="nav nav-tabs">
-                                  <h1 id="Day6"><BR><BR>Day 6</h1>
-                                  <p>Leave Baker City at 11:00 AM. Return to Ogden.</p>
-                                </ul>
-                            </div>                       
-                    </div>
                     </div>
                     </tab>
 
@@ -155,31 +156,41 @@
                         <tab-heading>
                         <i class="glyphicon glyphicon-bell"></i> Details
                         </tab-heading>  
-                    <h4><center>{{alertMessage}}</center></h4>                           
-                        <div class="itineraryTab">
+                    <h4><center>{{alertMessage}}</center></h4> 
+                        <div class="itineraryTab">               
+                                <ul>
+                                  <h3 id="">Estimated Gas Costs (based on harley)</h1>
+                                  <p>$500.00 @ $3.64 per gallon.</p>
+                                </ul>
+                                <ul>
+                                  <h4 id=""><BR><BR>Hotel Costs</h1>
+                                  <strong>Marriot</strong><p>$150 per night</p>
+                                  <strong>Holiday Inn</strong><p>$170 per night</p>
+                                  <strong>Howard Johnson</strong><p>$100 per night</p>
+                                </ul>
                         </div>
+                        
                     </tab>
                 </tabset>
             </div>
 
 <!--DENVER-->
-            <div class="ng-hide container" ng-show="clickedRide === 'Denver'">
+            <div class="ng-hide" ng-show="clickedRide === 'Denver'">
                 <tabset>
 
                     <!--TAB 1-->
-
                     <tab select="renderCalender(myCalendar1);">
                         <tab-heading>
                         <i class="glyphicon glyphicon-bell"></i> Map 
                         </tab-heading> 
-                        <h4><center>{{alertMessage}}</center></h4>
+                            <h4><center>{{alertMessage}}</center></h4>
                             <iframe 
-                                class="span7 map"
+                                class="map"
                                 width="500" 
                                 height="410" 
                                 frameborder="2" 
                                 style="border:2" 
-                                waypoints="boise,idaho"
+                                waypoints=""
                                 src="https://www.google.com/maps/embed/v1/directions?origin=Ogden%2C%20UT%2C%20United%20States
                                 &destination=denver%20colorado
                                 &key=AIzaSyB_hdduquNNKypbRMno9ljFtikoBh7ekcE
@@ -244,7 +255,16 @@
                         </tab-heading>  
                         <h4><center>{{alertMessage}}</center></h4>                           
                             <div class="itineraryTab">
-                               
+                                <ul>
+                                  <h3 id="">Estimated Gas Costs (based on harley)</h1>
+                                  <p>$300.00 @ $3.64 per gallon.</p>
+                                </ul>
+                                <ul>
+                                  <h4 id=""><BR><BR>Hotel Costs</h1>
+                                  <strong>Quality Inn</strong><p>$100 per night</p>
+                                  <strong>Marriot</strong><p>$170 per night</p>
+                                  <strong>Hampton</strong><p>$150 per night</p>
+                                </ul>
                             </div>
                     </tab>
                 </tabset>
@@ -252,7 +272,7 @@
 
 
 
-<!--PHOENIX-->
+<!--San Franscico-->
             <div class="ng-hide" ng-show="clickedRide === 'San Francisco'">
                 <tabset>
                     <!--TAB 1-->
@@ -328,7 +348,7 @@
                     </div>
                     </div>
                     </tab>
-                        </div>
+                        
 
 
                     <!--TAB 3-->
@@ -338,6 +358,16 @@
                       </tab-heading>  
                       <h4><center>{{alertMessage}}</center></h4>                           
                         <div class="itineraryTab">
+                            <ul>
+                              <h3 id="">Estimated Gas Costs (based on harley)</h1>
+                              <p>$300.00 @ $3.64 per gallon.</p>
+                            </ul>
+                            <ul>
+                              <h4 id=""><BR><BR>Hotel Costs</h1>
+                              <strong>Quality Inn</strong><p>$100 per night</p>
+                              <strong>Marriot</strong><p>$170 per night</p>
+                              <strong>Hampton</strong><p>$150 per night</p>
+                            </ul>
                         </div>
                     </tab>
                 </tabset>
@@ -355,9 +385,7 @@
                   <button class="btn" ng-click="addRemoveEventSource(eventSources,eventSource)">
                     Toggle Source
                   </button>
-                  <button type="button" class="btn btn-primary" ng-click="addEvent()">
-                    Add Event
-                  </button>
+                  <button type="button" class="btn btn-primary" ng-click="addEvent()">Add Event</button>
                 </div>
 
                 <ul class="unstyled">
