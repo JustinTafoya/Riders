@@ -285,12 +285,23 @@ a:focus {
 }
 
 .about-section{
-    color: #000;
+    color: orange;
+    font-color: #fff;
     background: url(../img/Ogden.jpg) no-repeat center center;
     background-size:1200px 900px;
     padding: 250px;
     padding-bottom: 250px;
     margin: 5px;
+
+}
+.about-section h2{
+    background-color:#777;
+    width: 200px;
+    margin-left:50px;
+
+}
+.about-section p{
+    background-color:#777;
 
 }
 

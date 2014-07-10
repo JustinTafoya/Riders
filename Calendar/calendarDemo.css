@@ -68,7 +68,7 @@ li{
 /*NAVIGATION*/
 
 .navbar {
-	padding:0px 10px 0px 30px;
+	padding:0px 10px 0px 0px;
     margin-bottom: 0;
     margin-left:0px ;
     border-bottom: 1px solid rgba(255,255,255,.3);
@@ -83,11 +83,16 @@ li{
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     background-color: #000;
-    height:40px;
+
     overflow-x: scroll;
-    overflow-y: scroll;
-    width:550px;
+
+    width:500px;
 }
+
+.navbar-example {
+    height: 400px;
+    width:550px;
+    overflow-y: scroll;
 }
 
 .navbar-brand {
@@ -301,17 +306,17 @@ border:1px solid red;
 /*MAP*/
 .map {
 /*	margin-left:5%;*/
-    float:left;
+   float:left;
 	margin-top:5px;
-    border: 2px solid orange;
-    margin-left: 0px;
+  /*  border: 2px solid orange;*/
+
 
 }
 .mapAlert{
-	width: 550px; 
-/*	background-color: blue;*/
+	width: 500px; 
 	float: left; 
-	margin-left:5%;
+	margin-left:2%;
+	position:relative;
 }
 
 .mapbutton{
