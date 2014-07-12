@@ -25,8 +25,8 @@ function CalendarCtrl($scope) {
     $scope.events =[
       // {title: 'All Day Event',start: new Date(y, m, 1)},
       {title: 'Portland',description: "Goes far",start: new Date(y, m, 1 - 0),end: new Date(y, m, 6 - 0)},
-      {title: 'Denver',start: new Date(y, 5, 27 - 0),end: new Date(y, 6, 01 - 0)},
-      {title: 'San Francisco',start: new Date(y, 6, 15 - 0),end: new Date(y, 6, 22 - 0)},
+      {title: 'Denver',start: new Date(y, m, 23 - 0),end: new Date(y, m, 28 - 0)},
+      {title: 'San Francisco',start: new Date(y, 7, 15 - 0),end: new Date(y, 7, 22 - 0)},
       // {id: 999,title: 'Repeating Event',start: new Date(y, m, d - 3, 16, 0),allDay: false},
       // {id: 999,title: 'Repeating Event',start: new Date(y, m, d + 4, 16, 0),allDay: false},
       // {title: 'Click for Google',start: new Date(y, m, 28),end: new Date(y, m, 29),url: 'http://yahoo.com/'}//Page link

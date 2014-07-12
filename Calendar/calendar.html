@@ -124,11 +124,11 @@
                                 <div class="navbar-example">
                                     <ul class="nav nav-tabs">
                                       <h1>Day 1</h1>
-                                      <p>Leave Ogden at 7:00 AM.</p>
+                                      <p>Leave Ogden at 7:00 AM. Arrive in Boise</p>
                                     </ul>
                                     <ul class="nav nav-tabs">
                                       <h1 id="Day2"><BR><BR>Day 2</h1>
-                                      <p>Arrive in Boise. Spend the night in Boise.</p>
+                                      <p>Free day in Boise.</p>
                                     </ul>
                                     <ul class="nav nav-tabs">
                                       <h1 id="Day3"><BR><BR>Day 3</h1>
@@ -177,7 +177,6 @@
 <!--DENVER-->
             <div class="ng-hide" ng-show="clickedRide === 'Denver'">
                 <tabset>
-
                     <!--TAB 1-->
                     <tab select="renderCalender(myCalendar1);">
                         <tab-heading>
@@ -242,7 +241,7 @@
                                 </ul>
                                 <ul class="nav nav-tabs">
                                   <h1 id="Day5"><BR><BR>Day 5</h1>
-                                  <p>Leave Grand Junction. Arrive in Denver.</p>
+                                  <p>Leave Grand Junction. Arrive in Ogden.</p>
                                 </ul>
                             </div>                       
                     </div>
@@ -272,7 +271,7 @@
 
 
 
-<!--San Franscico-->
+<!--SAN FRANSCISCO-->
             <div class="ng-hide" ng-show="clickedRide === 'San Francisco'">
                 <tabset>
                     <!--TAB 1-->
@@ -282,16 +281,16 @@
                       </tab-heading> 
                             <h4><center>{{alertMessage}}</center></h4>
                             <iframe 
-                                class="span7 map"
+                                class="map"
                                 width="500" 
                                 height="410" 
                                 frameborder="2" 
                                 style="border:2" 
                                 waypoints="boise,idaho"
                                 src="https://www.google.com/maps/embed/v1/directions?origin=Ogden%2C%20UT%2C%20United%20States
-                                &destination=denver%20colorado
+                                &destination=sanfrancisco%20california
                                 &key=AIzaSyB_hdduquNNKypbRMno9ljFtikoBh7ekcE
-                                &center=45,-115
+                                &center=43,-123
                                 &zoom=6
                                 &maptype=satellite">
                             </iframe>

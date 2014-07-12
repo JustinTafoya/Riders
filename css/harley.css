@@ -48,11 +48,11 @@ a {
 a:hover,
 a:focus {
     text-decoration: none;
-    color: #176e61;
+/*    color: #176e61;*/
 }
 
 
-
+/*CLEARFIX*/
 
 .clearfix:after {
      visibility: hidden;
@@ -68,12 +68,7 @@ a:focus {
 .clearfix { display: block; }
 
 
-
-
-
-.light {
-    font-weight: 400;
-}
+/*NAVBAR*/
 
 .navbar {
     margin-bottom: 0;
@@ -81,6 +76,7 @@ a:focus {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     background-color: #000;
+    text-shadow: 2px 2px #000;
 }
 
 .navbar-brand {
@@ -99,13 +95,18 @@ a:focus {
     -webkit-transition: background .3s ease-in-out;
     -moz-transition: background .3s ease-in-out;
     transition: background .3s ease-in-out;
+    color:#fff;
 }
 
-.navbar-custom .nav li a:hover,
-.navbar-custom .nav li a:focus,
 .navbar-custom .nav li.active {
-    outline: 0;
-    background-color: rgba(255,255,255,.2);
+    color:orange;
+}
+.navbar-custom .nav li a:hover,
+.navbar-custom .nav li a:focus{
+
+    color:#fff;
+    outline: ;
+    background-color: none;
 }
 
 .navbar-toggle {
@@ -116,7 +117,7 @@ a:focus {
 
 .navbar-toggle:focus,
 .navbar-toggle:active {
-    outline: 0;
+/*    outline: 0;*/
 }
 
 @media(min-width:767px) {
@@ -151,6 +152,7 @@ a:focus {
     padding: 100px 0;
     text-align: center;
     color: #FF8000;
+    text-shadow: 6px 2px #000;
     background: url(../img/harleyBike.jpg) no-repeat bottom center scroll;
     background-color: #000;
     -webkit-background-size: cover;
@@ -159,26 +161,7 @@ a:focus {
     -o-background-size: cover;
 }
 
-/*VIDEO BACKGROUND*/
-/*
-#intro-Video {
-  position: absolute;
-  top: 0px; 
-  left: 0px; 
-  min-width: 100%; 
-  min-height: 100%;
-  z-index: -1;
-}
- 
-@media only screen and (max-width: 768px) {
-  video {
-    display:none;
-  }
-  body{
-    background-image:url("harley.jpg");
-  }
-}
-*/
+
 
 .intro-body {
     display: table-cell;
@@ -191,7 +174,9 @@ a:focus {
 
 .intro-text {
     font-size: 18px;
-    margin-top: 16em;
+    margin-top: 20em;
+    color:#fff;
+    text-shadow: 2px 2px #000;
 }
 
 @media(min-width:767px) {
@@ -207,6 +192,7 @@ a:focus {
     .intro-text {
         font-size: 25px;
         margin-top: 16em;
+        text-shadow: 2px 2px #000;
     }
 }
 
@@ -292,16 +278,20 @@ a:focus {
     padding: 250px;
     padding-bottom: 250px;
     margin: 5px;
+    
 
 }
 .about-section h2{
-    background-color:#777;
+    background-color:rgba(140, 140, 140, 0.5);
+    text-shadow: 2px 1px #000;
     width: 200px;
     margin-left:50px;
 
 }
 .about-section p{
-    background-color:#777;
+    color:#fff;
+    text-shadow: 1px 1px #000;
+    background-color:rgba(140, 140, 140, 0.7);
 
 }
 
@@ -316,7 +306,7 @@ a:focus {
 .rides-section {
     width: 100%;
     height:50em;
-    padding: 50px 0;
+    padding: 150px 0;
     color: #fff;
     background: url(../img/Road.jpg) no-repeat center center scroll;
     background-color: #000;
@@ -464,7 +454,28 @@ body {
 
 
 
+.light {
+    font-weight: 400;
+}
 
-
-
+/*VIDEO BACKGROUND*/
+/*
+#intro-Video {
+  position: absolute;
+  top: 0px; 
+  left: 0px; 
+  min-width: 100%; 
+  min-height: 100%;
+  z-index: -1;
+}
+ 
+@media only screen and (max-width: 768px) {
+  video {
+    display:none;
+  }
+  body{
+    background-image:url("harley.jpg");
+  }
+}
+*/
 
